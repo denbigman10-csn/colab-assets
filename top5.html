@@ -56,7 +56,7 @@
     transform:rotate(8deg) scale(.6);transition:opacity .7s,transform .7s cubic-bezier(.2,.9,.3,1.35)}
   #mascotCorner.on{opacity:.92;transform:rotate(4deg) scale(1)}
   /* субтитры — караоке */
-  #subs{position:absolute;bottom:250px;left:70px;right:70px;min-height:120px;
+  #subs{position:absolute;bottom:540px;left:70px;right:70px;min-height:120px;
     font-size:46px;font-weight:700;line-height:1.32;text-align:center;color:#E8EAF0}
   #subs .w{display:inline-block;margin:0 6px;opacity:0;transform:translateY(14px);
     transition:opacity .22s ease,transform .22s ease,color .18s}
@@ -166,7 +166,7 @@ function showScene(i){const sc=SCENES[i];curScene=i;
   sc.wordList.forEach(w=>{const sp=document.createElement('span');sp.className='w';sp.textContent=w;subs.appendChild(sp);sc.spans.push(sp)});
   if(sc.final){fin.classList.add('on');pnum.textContent='★';pfill.style.width='100%';return}
   fin.classList.remove('on');
-  if(sc.setup===null){vendor.textContent='';nameEl.textContent='';tag.textContent='';stats.innerHTML='';pnum.textContent='—';pfill.style.width='4%';fadeInGroup();return}
+  if(sc.setup===null){vendor.textContent='';nameEl.textContent='';tag.textContent='';stats.innerHTML='';pnum.textContent='—';pfill.style.width='4%';return}
   rank.textContent=sc.rank;rank.classList.toggle('solid',sc.rank===1);
   logoImg.src=sc.logo;vendor.textContent=sc.vendor;nameEl.innerHTML=sc.name;tag.textContent=sc.tag;
   stats.innerHTML=sc.stats.map(s=>'<div class="stat"><div class="v">'+s[0]+'</div><div class="k">'+s[1]+'</div></div>').join('');
