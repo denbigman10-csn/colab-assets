@@ -55,8 +55,9 @@
   #mascotCorner{position:absolute;bottom:120px;right:60px;width:140px;opacity:0;
     transform:rotate(8deg) scale(.6);transition:opacity .7s,transform .7s cubic-bezier(.2,.9,.3,1.35)}
   #mascotCorner.on{opacity:.92;transform:rotate(4deg) scale(1)}
-  /* субтитры — караоке */
-  #subs{position:absolute;bottom:540px;left:70px;right:70px;min-height:120px;
+  /* субтитры — караоке (ВЫКЛ: юзер добавляет субтитры сам в монтаже, разовое исключение).
+     Чтобы вернуть — убрать display:none ниже. */
+  #subs{display:none;position:absolute;bottom:540px;left:70px;right:70px;min-height:120px;
     font-size:46px;font-weight:700;line-height:1.32;text-align:center;color:#E8EAF0}
   #subs .w{display:inline-block;margin:0 6px;opacity:0;transform:translateY(14px);
     transition:opacity .22s ease,transform .22s ease,color .18s}
